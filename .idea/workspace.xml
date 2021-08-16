@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="ba98fc6d-6635-4ddd-afcd-607a436b0ba5" name="默认变更列表" comment="">
+      <change afterPath="$PROJECT_DIR$/doter-common/doter-common.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doter-common/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doter-common/src/main/java/com/doter/common/AutoConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doter-common/src/main/java/com/doter/common/config/KaptchaConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doter-common/src/main/java/com/doter/common/config/MyMetaObjectHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doter-common/src/main/java/com/doter/common/config/MybatisPlusConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doter-common/src/main/java/com/doter/common/config/RedisConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doter-common/src/main/java/com/doter/common/config/SecurityCoreConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doter-common/src/main/java/com/doter/common/constant/SecurityConstants.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doter-common/src/main/java/com/doter/common/core/logback/LogBackAspect.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doter-common/src/main/java/com/doter/common/core/logback/annotation/LogBack.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doter-common/src/main/java/com/doter/common/core/magic/UserMagic.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doter-common/src/main/java/com/doter/common/core/result/Result.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doter-common/src/main/java/com/doter/common/datasource/entity/BaseEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doter-common/src/main/java/com/doter/common/datasource/entity/UserDetail.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doter-common/src/main/java/com/doter/common/datasource/entity/user/DtaUser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doter-common/src/main/java/com/doter/common/datasource/entity/user/DtsMenu.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doter-common/src/main/java/com/doter/common/datasource/entity/user/DtsRole.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doter-common/src/main/java/com/doter/common/datasource/entity/user/DtsRoleMenu.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doter-common/src/main/java/com/doter/common/datasource/entity/user/DtsUser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doter-common/src/main/java/com/doter/common/datasource/entity/user/DtsUserRole.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doter-common/src/main/java/com/doter/common/datasource/param/DtsMenuParam.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doter-common/src/main/java/com/doter/common/datasource/param/DtsRoleParam.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doter-common/src/main/java/com/doter/common/datasource/param/DtsUserParam.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doter-common/src/main/java/com/doter/common/enums/OperatorType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doter-common/src/main/java/com/doter/common/enums/ResultStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doter-common/src/main/java/com/doter/common/exception/BusinessException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doter-common/src/main/java/com/doter/common/exception/GlobalExceptionHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doter-common/src/main/java/com/doter/common/redis/service/RedisService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doter-common/src/main/java/com/doter/common/security/exception/BadCodeException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doter-common/src/main/java/com/doter/common/security/filters/CORSFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doter-common/src/main/java/com/doter/common/security/filters/ImageAuthenticationFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doter-common/src/main/java/com/doter/common/security/filters/PhoneAuthenticationFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doter-common/src/main/java/com/doter/common/security/filters/TokenAuthenticationFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doter-common/src/main/java/com/doter/common/security/filters/UsernameAuthenticationFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doter-common/src/main/java/com/doter/common/security/handler/RestAccessDeniedHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doter-common/src/main/java/com/doter/common/security/handler/RestAuthenticationEntryPoint.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doter-common/src/main/java/com/doter/common/security/handler/RestAuthenticationFailureHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doter-common/src/main/java/com/doter/common/security/handler/RestAuthenticationSuccessHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doter-common/src/main/java/com/doter/common/security/handler/RestLogoutSuccessHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doter-common/src/main/java/com/doter/common/security/manager/CodeManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doter-common/src/main/java/com/doter/common/security/manager/TokenManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doter-common/src/main/java/com/doter/common/security/properties/IgnoreProperties.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doter-common/src/main/java/com/doter/common/security/token/ImageCodeAuthenticationToken.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doter-common/src/main/java/com/doter/common/security/token/PhoneCodeAuthenticationToken.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doter-common/src/main/java/com/doter/common/tools/AESTool.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doter-common/src/main/java/com/doter/common/tools/IPTool.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doter-common/src/main/java/com/doter/common/tools/ImageTool.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doter-common/src/main/java/com/doter/common/tools/SecurityTool.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doter-common/src/main/java/com/doter/common/tools/UserTool.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doter-common/src/main/java/com/doter/common/tools/VerifyCodeTool.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doter-common/src/main/resources/META-INF/spring.factories" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doter-common/src/main/resources/logback-spring.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doter-common/target/classes/META-INF/spring.factories" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doter-server/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doter-server/.mvn/wrapper/MavenWrapperDownloader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doter-server/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doter-server/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doter-server/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doter-server/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doter-server/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doter-server/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doter-server/src/main/java/com/doter/server/DoterServerApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doter-server/src/main/java/com/doter/server/config/SecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doter-server/src/main/java/com/doter/server/controller/OAuthController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doter-server/src/main/java/com/doter/server/mapper/DtaUserMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doter-server/src/main/java/com/doter/server/mapper/DtsMenuMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doter-server/src/main/java/com/doter/server/mapper/DtsRoleMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doter-server/src/main/java/com/doter/server/mapper/DtsUserMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doter-server/src/main/java/com/doter/server/security/providers/ImageAuthenticationProvider.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doter-server/src/main/java/com/doter/server/security/providers/PhoneAuthenticationProvider.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doter-server/src/main/java/com/doter/server/service/DtaUserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doter-server/src/main/java/com/doter/server/service/DtsUserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doter-server/src/main/java/com/doter/server/service/UserDetailService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doter-server/src/main/java/com/doter/server/service/impl/DtaUserServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doter-server/src/main/java/com/doter/server/service/impl/DtsUserServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doter-server/src/main/java/com/doter/server/service/impl/UserDetailServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doter-server/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doter-server/src/test/java/com/doter/server/DoterServerApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="MavenRunner">
+    <option name="delegateBuildToMaven" value="true" />
+    <option name="jreName" value="1.8" />
+  </component>
+  <component name="ProjectId" id="1wmrV1X9aHMku9YeIQOPEasELtR" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="false" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="android.sdk.path" value="$PROJECT_DIR$/../../development/Program Files/Android/Sdk" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="jdk.selected.JAVA_MODULE" value="1.8" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/doter-server/src/main/java/com/doter/server" />
+    <property name="project.structure.last.edited" value="项目" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.runner" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\MyGit\doter-frame\doter-server\src\main\java\com\doter\server" />
+      <recent name="D:\MyGit\doter-frame\doter-common\src\main\java\com\doter\common" />
+      <recent name="D:\MyGit\doter-frame\doter-common\src\main\java\com\doter\common\server" />
+      <recent name="D:\MyGit\doter-frame\doter-common\src\main\resources" />
+      <recent name="D:\MyGit\doter-frame\doter-common\src\main\java\com\doter\common\tools" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.doter.server" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.doter.common.datasource.entity" />
+      <recent name="com.doter.common.cache.service" />
+      <recent name="com.doter.common.config" />
+      <recent name="com.doter.common" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DoterServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="doter-server" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.doter.server.DoterServerApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
+  <component name="SshConsoleOptionsProvider">
+    <option name="myEncoding" value="UTF-8" />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="默认任务">
+      <changelist id="ba98fc6d-6635-4ddd-afcd-607a436b0ba5" name="默认变更列表" comment="" />
+      <created>1629074624619</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1629074624619</updated>
+      <workItem from="1629074626125" duration="275000" />
+      <workItem from="1629074912190" duration="6339000" />
+      <workItem from="1629081345584" duration="166000" />
+      <workItem from="1629081519151" duration="91000" />
+      <workItem from="1629081631587" duration="1372000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+</project>
