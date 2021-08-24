@@ -1,8 +1,8 @@
 package com.doter.common.security.manager;
 
-import com.yuntong.common.cache.service.RedisService;
-import com.yuntong.common.core.constant.SecurityConstants;
-import com.yuntong.common.security.exception.BadCodeException;
+import com.doter.common.constant.SecurityConstants;
+import com.doter.common.redis.service.RedisService;
+import com.doter.common.security.exception.BadCodeException;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.Resource;

@@ -4,87 +4,27 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ba98fc6d-6635-4ddd-afcd-607a436b0ba5" name="默认变更列表" comment="">
-      <change afterPath="$PROJECT_DIR$/doter-common/doter-common.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doter-common/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doter-common/src/main/java/com/doter/common/AutoConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doter-common/src/main/java/com/doter/common/config/KaptchaConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doter-common/src/main/java/com/doter/common/config/MyMetaObjectHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doter-common/src/main/java/com/doter/common/config/MybatisPlusConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doter-common/src/main/java/com/doter/common/config/RedisConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doter-common/src/main/java/com/doter/common/config/SecurityCoreConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doter-common/src/main/java/com/doter/common/constant/SecurityConstants.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doter-common/src/main/java/com/doter/common/core/logback/LogBackAspect.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doter-common/src/main/java/com/doter/common/core/logback/annotation/LogBack.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doter-common/src/main/java/com/doter/common/core/magic/UserMagic.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doter-common/src/main/java/com/doter/common/core/result/Result.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doter-common/src/main/java/com/doter/common/datasource/entity/BaseEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doter-common/src/main/java/com/doter/common/datasource/entity/UserDetail.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doter-common/src/main/java/com/doter/common/datasource/entity/user/DtaUser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doter-common/src/main/java/com/doter/common/datasource/entity/user/DtsMenu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doter-common/src/main/java/com/doter/common/datasource/entity/user/DtsRole.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doter-common/src/main/java/com/doter/common/datasource/entity/user/DtsRoleMenu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doter-common/src/main/java/com/doter/common/datasource/entity/user/DtsUser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doter-common/src/main/java/com/doter/common/datasource/entity/user/DtsUserRole.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doter-common/src/main/java/com/doter/common/datasource/param/DtsMenuParam.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doter-common/src/main/java/com/doter/common/datasource/param/DtsRoleParam.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doter-common/src/main/java/com/doter/common/datasource/param/DtsUserParam.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doter-common/src/main/java/com/doter/common/enums/OperatorType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doter-common/src/main/java/com/doter/common/enums/ResultStatus.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doter-common/src/main/java/com/doter/common/exception/BusinessException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doter-common/src/main/java/com/doter/common/exception/GlobalExceptionHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doter-common/src/main/java/com/doter/common/redis/service/RedisService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doter-common/src/main/java/com/doter/common/security/exception/BadCodeException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doter-common/src/main/java/com/doter/common/security/filters/CORSFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doter-common/src/main/java/com/doter/common/security/filters/ImageAuthenticationFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doter-common/src/main/java/com/doter/common/security/filters/PhoneAuthenticationFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doter-common/src/main/java/com/doter/common/security/filters/TokenAuthenticationFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doter-common/src/main/java/com/doter/common/security/filters/UsernameAuthenticationFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doter-common/src/main/java/com/doter/common/security/handler/RestAccessDeniedHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doter-common/src/main/java/com/doter/common/security/handler/RestAuthenticationEntryPoint.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doter-common/src/main/java/com/doter/common/security/handler/RestAuthenticationFailureHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doter-common/src/main/java/com/doter/common/security/handler/RestAuthenticationSuccessHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doter-common/src/main/java/com/doter/common/security/handler/RestLogoutSuccessHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doter-common/src/main/java/com/doter/common/security/manager/CodeManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doter-common/src/main/java/com/doter/common/security/manager/TokenManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doter-common/src/main/java/com/doter/common/security/properties/IgnoreProperties.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doter-common/src/main/java/com/doter/common/security/token/ImageCodeAuthenticationToken.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doter-common/src/main/java/com/doter/common/security/token/PhoneCodeAuthenticationToken.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doter-common/src/main/java/com/doter/common/tools/AESTool.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doter-common/src/main/java/com/doter/common/tools/IPTool.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doter-common/src/main/java/com/doter/common/tools/ImageTool.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doter-common/src/main/java/com/doter/common/tools/SecurityTool.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doter-common/src/main/java/com/doter/common/tools/UserTool.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doter-common/src/main/java/com/doter/common/tools/VerifyCodeTool.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doter-common/src/main/resources/META-INF/spring.factories" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doter-common/src/main/resources/logback-spring.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doter-common/target/classes/META-INF/spring.factories" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doter-server/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doter-server/.mvn/wrapper/MavenWrapperDownloader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doter-server/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doter-server/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doter-server/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doter-server/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doter-server/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doter-server/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doter-server/src/main/java/com/doter/server/DoterServerApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doter-server/src/main/java/com/doter/server/config/SecurityConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doter-server/src/main/java/com/doter/server/controller/OAuthController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doter-server/src/main/java/com/doter/server/mapper/DtaUserMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doter-server/src/main/java/com/doter/server/mapper/DtsMenuMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doter-server/src/main/java/com/doter/server/mapper/DtsRoleMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doter-server/src/main/java/com/doter/server/mapper/DtsUserMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doter-server/src/main/java/com/doter/server/security/providers/ImageAuthenticationProvider.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doter-server/src/main/java/com/doter/server/security/providers/PhoneAuthenticationProvider.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doter-server/src/main/java/com/doter/server/service/DtaUserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doter-server/src/main/java/com/doter/server/service/DtsUserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doter-server/src/main/java/com/doter/server/service/UserDetailService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doter-server/src/main/java/com/doter/server/service/impl/DtaUserServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doter-server/src/main/java/com/doter/server/service/impl/DtsUserServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doter-server/src/main/java/com/doter/server/service/impl/UserDetailServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doter-server/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doter-server/src/test/java/com/doter/server/DoterServerApplicationTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    <list default="true" id="ba98fc6d-6635-4ddd-afcd-607a436b0ba5" name="默认变更列表" comment="Filter过滤器">
+      <change afterPath="$PROJECT_DIR$/doter-common/src/test/java/com/doter/common/tools/AESToolTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doter-common/src/main/java/com/doter/common/security/filters/ImageAuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/doter-common/src/main/java/com/doter/common/security/filters/ImageAuthenticationFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doter-common/src/main/java/com/doter/common/security/filters/PhoneAuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/doter-common/src/main/java/com/doter/common/security/filters/PhoneAuthenticationFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doter-common/src/main/java/com/doter/common/security/filters/TokenAuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/doter-common/src/main/java/com/doter/common/security/filters/TokenAuthenticationFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doter-common/src/main/java/com/doter/common/security/filters/UsernameAuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/doter-common/src/main/java/com/doter/common/security/filters/UsernameAuthenticationFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doter-common/src/main/java/com/doter/common/security/handler/RestAccessDeniedHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/doter-common/src/main/java/com/doter/common/security/handler/RestAccessDeniedHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doter-common/src/main/java/com/doter/common/security/handler/RestAuthenticationEntryPoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/doter-common/src/main/java/com/doter/common/security/handler/RestAuthenticationEntryPoint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doter-common/src/main/java/com/doter/common/security/handler/RestAuthenticationFailureHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/doter-common/src/main/java/com/doter/common/security/handler/RestAuthenticationFailureHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doter-common/src/main/java/com/doter/common/security/handler/RestAuthenticationSuccessHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/doter-common/src/main/java/com/doter/common/security/handler/RestAuthenticationSuccessHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doter-common/src/main/java/com/doter/common/security/handler/RestLogoutSuccessHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/doter-common/src/main/java/com/doter/common/security/handler/RestLogoutSuccessHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doter-common/src/main/java/com/doter/common/security/manager/CodeManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/doter-common/src/main/java/com/doter/common/security/manager/CodeManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doter-common/src/main/java/com/doter/common/security/token/ImageCodeAuthenticationToken.java" beforeDir="false" afterPath="$PROJECT_DIR$/doter-common/src/main/java/com/doter/common/security/token/ImageCodeAuthenticationToken.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doter-common/src/main/java/com/doter/common/security/token/PhoneCodeAuthenticationToken.java" beforeDir="false" afterPath="$PROJECT_DIR$/doter-common/src/main/java/com/doter/common/security/token/PhoneCodeAuthenticationToken.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doter-common/src/main/java/com/doter/common/tools/AESTool.java" beforeDir="false" afterPath="$PROJECT_DIR$/doter-common/src/main/java/com/doter/common/tools/AESTool.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doter-server/src/main/java/com/doter/server/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/doter-server/src/main/java/com/doter/server/config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doter-server/src/main/java/com/doter/server/security/providers/ImageAuthenticationProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/doter-server/src/main/java/com/doter/server/security/providers/ImageAuthenticationProvider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doter-server/src/main/java/com/doter/server/security/providers/PhoneAuthenticationProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/doter-server/src/main/java/com/doter/server/security/providers/PhoneAuthenticationProvider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doter-server/src/main/java/com/doter/server/service/impl/UserDetailServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/doter-server/src/main/java/com/doter/server/service/impl/UserDetailServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,6 +35,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Interface" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -118,7 +60,6 @@
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
-    <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="false" />
     <option name="showLibraryContents" value="true" />
   </component>
@@ -131,12 +72,15 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="android.sdk.path" value="$PROJECT_DIR$/../../development/Program Files/Android/Sdk" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/doter-server/src/main/java/com/doter/server" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../V1/ytbao-client/ytbao-admin" />
     <property name="project.structure.last.edited" value="项目" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.runner" />
+    <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -146,8 +90,14 @@
       <recent name="D:\MyGit\doter-frame\doter-common\src\main\resources" />
       <recent name="D:\MyGit\doter-frame\doter-common\src\main\java\com\doter\common\tools" />
     </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.doter.server" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.doter.common.tools" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.doter.common.datasource.entity" />
@@ -156,14 +106,29 @@
       <recent name="com.doter.common" />
     </key>
   </component>
-  <component name="RunManager">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+  <component name="RunManager" selected="Application.AESToolTest">
+    <configuration name="AESToolTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.doter.common.tools.AESToolTest" />
+      <module name="doter-common" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.doter.common.tools.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -175,6 +140,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.AESToolTest" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
   <component name="SshConsoleOptionsProvider">
@@ -192,6 +162,14 @@
       <workItem from="1629081345584" duration="166000" />
       <workItem from="1629081519151" duration="91000" />
       <workItem from="1629081631587" duration="1372000" />
+      <workItem from="1629157860077" duration="1352000" />
+      <workItem from="1629164401752" duration="17468000" />
+      <workItem from="1629244175954" duration="20310000" />
+      <workItem from="1629330100363" duration="13770000" />
+      <workItem from="1629417005812" duration="2286000" />
+      <workItem from="1629420468132" duration="15518000" />
+      <workItem from="1629700019284" duration="8423000" />
+      <workItem from="1629790871257" duration="1764000" />
     </task>
     <servers />
   </component>

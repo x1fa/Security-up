@@ -30,6 +30,7 @@ public class RestAccessDeniedHandler implements AccessDeniedHandler {
         httpServletResponse.setStatus(HttpServletResponse.SC_OK);
         try {
             PrintWriter out = httpServletResponse.getWriter();
+            //403 权限不足
             out.write(JSONUtil.toJsonStr(Result.failed(ResultStatus.ACCESS_DENIED)));
             out.flush();
             out.close();

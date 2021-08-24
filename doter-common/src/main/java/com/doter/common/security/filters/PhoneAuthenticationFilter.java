@@ -34,12 +34,15 @@ public class PhoneAuthenticationFilter extends AbstractAuthenticationProcessingF
     @Override
     public Authentication attemptAuthentication(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse) throws AuthenticationException, IOException, ServletException {
         if (!"POST".equals(httpServletRequest.getMethod())) {
+            //不是POST请求方法直接返回 不支持的身份验证方法
             throw new AuthenticationServiceException(
                     "不支持的身份验证方法: " + httpServletRequest.getMethod());
         }
+        //获取前端传入数据
         String userType = httpServletRequest.getParameter("userType");
         String phone = httpServletRequest.getParameter(phoneNumberParam).trim();
         String code = httpServletRequest.getParameter(phoneCodeParam).trim();
+        //判断是否为空
         if (StrUtil.isBlank(userType)){
             throw new AuthenticationServiceException("用户类型不能为空！");
         }
@@ -49,8 +52,10 @@ public class PhoneAuthenticationFilter extends AbstractAuthenticationProcessingF
         if (StrUtil.isBlank(code)){
             throw new AuthenticationServiceException("验证码不能为空！");
         }
+        //放入放入实体对象
         PhoneCodeAuthenticationToken phoneCodeAuthenticationToken = new PhoneCodeAuthenticationToken(phone,code);
         this.setDetails(httpServletRequest,phoneCodeAuthenticationToken);
+        //在ProviderManager 认证提供者管理器中 进行认证
         return this.getAuthenticationManager().authenticate(phoneCodeAuthenticationToken);
     }
 

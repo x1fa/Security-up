@@ -29,8 +29,9 @@ public class AESTool {
      *
      * @param content 明文
      */
-    public static String encrypt(String content) {
+    public static String encrypt(int content) {
         return parseByte2HexStr(Objects.requireNonNull(aesCbcEncrypt(content.getBytes(), KEY.getBytes(), IV.getBytes())));
+
     }
 
     /**

@@ -40,15 +40,19 @@ public class ImageAuthenticationFilter extends AbstractAuthenticationProcessingF
 
     @Override
     public Authentication attemptAuthentication(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse) throws AuthenticationException, IOException, ServletException {
+
         if (!"POST".equals(httpServletRequest.getMethod())) {
+            //不是POST请求直接返回 不支持
             throw new AuthenticationServiceException(
                     "不支持的身份验证方法: " + httpServletRequest.getMethod());
         }
+        //前端获取数据
         String userType = httpServletRequest.getParameter("userType");
         String username = httpServletRequest.getParameter(usernameParam).trim();
         String password = httpServletRequest.getParameter(passwordParam);
-        String key = httpServletRequest.getParameter(imageKeyParam).trim();
+        String key = httpServletRequest.getParameter(imageKeyParam);
         String code = httpServletRequest.getParameter(imageCodeParam).trim();
+        //判断是否为空
         if (StrUtil.isBlank(userType)){
             throw new AuthenticationServiceException("用户类型不能为空！");
         }
@@ -61,9 +65,11 @@ public class ImageAuthenticationFilter extends AbstractAuthenticationProcessingF
         if (StrUtil.isBlank(code)){
             throw new AuthenticationServiceException("验证码不能为空！");
         }
+        //放入实体对象
         ImageCodeAuthenticationToken imageCodeAuthenticationToken = new ImageCodeAuthenticationToken(username, AESTool.decrypt(password),
                 key,code);
         this.setDetails(httpServletRequest,imageCodeAuthenticationToken);
+        //去ProviderManager 认证提供者管理中认证
         return this.getAuthenticationManager().authenticate(imageCodeAuthenticationToken);
     }
 

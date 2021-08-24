@@ -27,6 +27,7 @@ public class RestAuthenticationEntryPoint implements AuthenticationEntryPoint {
     public void commence(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, AuthenticationException e){
         log.warn("【未知身份】：{ 业务编码 —— " + ResultStatus.USER_NOT_LOGIN.getCode() + " } —— { 异常信息 —— " + ResultStatus.USER_NOT_LOGIN.getMessage() + " }");
         httpServletResponse.setContentType("application/json;charset=utf-8");
+        //200
         httpServletResponse.setStatus(HttpServletResponse.SC_OK);
         try {
             PrintWriter out = httpServletResponse.getWriter();
@@ -34,6 +35,7 @@ public class RestAuthenticationEntryPoint implements AuthenticationEntryPoint {
                 //账号过期
                 out.write(JSONUtil.toJsonStr(Result.failed(ResultStatus.USER_NOT_LOGIN,e.getMessage())));
             }else {
+                //
                 out.write(JSONUtil.toJsonStr(Result.failed(ResultStatus.USER_NOT_LOGIN)));
             }
             out.flush();

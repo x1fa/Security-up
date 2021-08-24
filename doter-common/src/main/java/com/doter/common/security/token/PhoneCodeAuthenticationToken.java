@@ -25,6 +25,8 @@ public class PhoneCodeAuthenticationToken extends AbstractAuthenticationToken {
         super(null);
         this.principal = principal;
         this.credentials = credentials;
+        //传入用户名密码 不通过认证
+        //设置不通过认证
         super.setAuthenticated(false);
     }
 
@@ -36,8 +38,11 @@ public class PhoneCodeAuthenticationToken extends AbstractAuthenticationToken {
      */
     public PhoneCodeAuthenticationToken(Object principal, Collection<? extends GrantedAuthority> authorities) {
         super(authorities);
+
         this.principal = principal;
         this.credentials = null;
+        //传入用户信息和权限信息
+        //设置通过认证
         super.setAuthenticated(true);
     }
 

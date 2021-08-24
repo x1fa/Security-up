@@ -25,12 +25,15 @@ public class ImageCodeAuthenticationToken extends AbstractAuthenticationToken {
      * 认证成功前
      * @param
      */
+    //实体类 不同参数的构造函数
     public ImageCodeAuthenticationToken(Object principal, Object credentials, String imageKey, String imageCode) {
         super(null);
         this.principal = principal;
         this.credentials = credentials;
         this.imageKey = imageKey;
         this.imageCode = imageCode;
+        //传入的用户名密码，redisKey 和 token 不通过认证
+        //设置不通过认证
         super.setAuthenticated(false);
     }
 
@@ -46,6 +49,8 @@ public class ImageCodeAuthenticationToken extends AbstractAuthenticationToken {
         this.credentials = null;
         this.imageKey = null;
         this.imageCode = null;
+        //传入用户信息和权限列表 通过认证
+        //设置通过认证
         super.setAuthenticated(true);
     }
 

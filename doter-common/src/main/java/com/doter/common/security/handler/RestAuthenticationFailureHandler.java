@@ -29,7 +29,9 @@ public class RestAuthenticationFailureHandler implements AuthenticationFailureHa
     public void onAuthenticationFailure(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, AuthenticationException e) {
         try {
             httpServletResponse.setContentType("application/json;charset=utf-8");
+            //设置状态码
             httpServletResponse.setStatus(HttpServletResponse.SC_OK);
+            //写
             PrintWriter out = httpServletResponse.getWriter();
             if (e instanceof AccountExpiredException) {
                 //账号过期

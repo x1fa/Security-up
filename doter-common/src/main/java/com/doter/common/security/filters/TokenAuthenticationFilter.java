@@ -52,40 +52,63 @@ public class TokenAuthenticationFilter extends OncePerRequestFilter {
     protected void doFilterInternal(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, FilterChain filterChain) throws ServletException, IOException {
         String device = httpServletRequest.getHeader(SecurityConstants.DEVICE_HEADER);
         String authHeader = httpServletRequest.getHeader(SecurityConstants.TOKEN_HEADER);
+        //检查url  【这里可以直接不写，在security 配置就可以】
         if (checkUrl(httpServletRequest)) {
+            //直接放行
             filterChain.doFilter(httpServletRequest, httpServletResponse);
         }
+        //判断 Authorization是否存在 并且 token 前缀是不是 Bearer
         if (StrUtil.isNotBlank(authHeader) && authHeader.startsWith(SecurityConstants.TOKEN_PREFIX)) {
+            //获取token
             String authToken = authHeader.substring(SecurityConstants.TOKEN_PREFIX.length());
+            //根据token获取用户名
             String username = tokenManager.getUserName(authToken);
+            //判断是否为空
             if (username == null) {
+                //用户不存在 返回
                 response(httpServletResponse, ResultStatus.TOKEN_PARSE_ERROR);
                 return;
             }
+            //判断不为空 redis的key
             String redisKey = SecurityConstants.USER_ACCESS_TOKEN_RIDES + device + ":";
+            //当key不存在
             if (!redisService.hasKey(redisKey + username)) {
+                //返回 登录失效 重新登录
                 response(httpServletResponse, ResultStatus.TOKEN_EXPIRED);
                 return;
             }
+            //存在
+            //根据rediskey 获取token
             String redisToken = redisService.get(redisKey + username).toString();
             if (!redisToken.equals(authToken)) {
+                //rendisToken和authToken 不一致
+                //用户在别处登录，请更改密码或重新登录！
                 response(httpServletResponse, ResultStatus.TOKEN_OUT_OF_CTRL);
                 return;
             }
+            //reidsToken和authToken 一致
+            //根据Token 获得 user信息
             UserDetail userDetail = tokenManager.getUserDetail(authToken);
+            //放入UsernamePasswordAuthenticationToken实体对象
             UsernamePasswordAuthenticationToken authentication = new UsernamePasswordAuthenticationToken(userDetail, null, userDetail.getAuthorities());
+
             authentication.setDetails(new WebAuthenticationDetailsSource().buildDetails(httpServletRequest));
+            //Authentication根据传过去的数据进行封装类型是否一致，一致进行UserdetailsService得到返回数据然后拷贝到Authentication
             SecurityContextHolder.getContext().setAuthentication(authentication);
         }
+        //不存在Token直接放行
         filterChain.doFilter(httpServletRequest, httpServletResponse);
     }
 
     private boolean checkUrl(HttpServletRequest httpServletRequest) {
         String method = httpServletRequest.getMethod();
         HttpMethod httpMethod = HttpMethod.resolve(method);
+        // 请求方式是否为空
         if (ObjectUtil.isNull(httpMethod)) {
+            //空，设置GET
             httpMethod = HttpMethod.GET;
         }
+        //不同请求 需要忽略不同url
         Set<String> ignores = Sets.newHashSet();
         switch (httpMethod) {
             case GET:
@@ -103,10 +126,14 @@ public class TokenAuthenticationFilter extends OncePerRequestFilter {
             default:
                 break;
         }
+        //需要忽略的 URL 格式，不考虑请求方法
         ignores.addAll(ignoreProperties.getPattern());
+        //是不是 不为空
         if (CollUtil.isNotEmpty(ignores)) {
             for (String ignore : ignores) {
+                //根据url和method 获取对象
                 AntPathRequestMatcher matcher = new AntPathRequestMatcher(ignore, method);
+                //判断 对象和当前传入request是否匹配
                 if (matcher.matches(httpServletRequest)) {
                     return true;
                 }

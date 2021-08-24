@@ -37,14 +37,22 @@ public class RestAuthenticationSuccessHandler implements AuthenticationSuccessHa
     @Override
     public void onAuthenticationSuccess(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, Authentication authentication) {
         try {
+            //获取前端数据 device
             String device = httpServletRequest.getHeader(SecurityConstants.DEVICE_HEADER);
+
             httpServletResponse.setContentType("application/json;charset=utf-8");
+            //设置状态码
             httpServletResponse.setStatus(HttpServletResponse.SC_OK);
+            //从认证authentication中获取 userDetail 用户信息
             UserDetail userDetail = (UserDetail) authentication.getPrincipal();
+            //根据用户信息 获取 通道tokenKey和刷新tokenKey
             String accessTokenKey = SecurityConstants.USER_ACCESS_TOKEN_RIDES+device+":"+userDetail.getUsername();
             String refreshTokenKey = SecurityConstants.USER_REFRESH_TOKEN_RIDES+device+":"+userDetail.getUsername();
+            //写
             PrintWriter out = httpServletResponse.getWriter();
+            //根据 用户信息 创建 token
             Map<String,String> map = tokenManager.createToken(userDetail);
+            //放到Redis 中
             redisService.set(accessTokenKey,map.get("accessToken"),SecurityConstants.ACCESS_TOKEN_EXPIRATION);
             redisService.set(refreshTokenKey,map.get("refreshToken"),SecurityConstants.REFRESH_TOKEN_EXPIRATION);
             out.write(JSONUtil.toJsonStr(Result.success(map)));

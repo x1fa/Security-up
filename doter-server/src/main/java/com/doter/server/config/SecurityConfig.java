@@ -59,11 +59,15 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Resource
     private RestAuthenticationSuccessHandler restAuthenticationSuccessHandler;
 
-
+    //认证处理器
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
+        //创建认证管理器
+        //UserDetailService 认证
         auth.userDetailsService(userDetailService).passwordEncoder(passwordEncoder);
+        //phone 认证提供者处理器
         auth.authenticationProvider(phoneAuthenticationProvider());
+        //image 认证提供者处理器
         auth.authenticationProvider(imageAuthenticationProvider());
     }
 
@@ -76,12 +80,21 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
      */
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        http.httpBasic().disable()
-                .formLogin().loginProcessingUrl("login")
-                .and().logout().logoutUrl("/oauth/logout").logoutSuccessHandler(restLogoutSuccessHandler);
+        //每一次过滤都要加上用户名密码过滤
+//        1.过滤器之前 进行token认证和密码认证"
+        http.addFilterBefore(tokenAuthenticationFilter(), UsernamePasswordAuthenticationFilter.class);
+        //2.添加过滤器之后 密码认证
         http.addFilterAfter(usernameAuthenticationFilter(), UsernamePasswordAuthenticationFilter.class)
+                //图片认证
                 .addFilterAfter(imageAuthenticationFilter(), UsernamePasswordAuthenticationFilter.class)
+                //手机验证码认证
                 .addFilterAfter(phoneAuthenticationFilter(), UsernamePasswordAuthenticationFilter.class);
+
+        http.httpBasic().disable()
+                .formLogin().disable()
+                //退出
+                .logout().logoutUrl("/oauth/logout").logoutSuccessHandler(restLogoutSuccessHandler);
+
 
         http.authorizeRequests().antMatchers(HttpMethod.OPTIONS).permitAll()
                 .antMatchers(HttpMethod.POST, "/oauth/login", "/oauth/login/**", "/oauth/refreshToken").permitAll()
@@ -91,12 +104,11 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         http.cors().and().csrf().disable().headers().frameOptions().disable().cacheControl();
 
         http.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
-
+        //例外的处理器
         http.exceptionHandling()
                 .authenticationEntryPoint(restAuthenticationEntryPoint)
                 .accessDeniedHandler(restAccessDeniedHandler);
 
-        http.addFilterBefore(tokenAuthenticationFilter(), UsernamePasswordAuthenticationFilter.class);
     }
 
     @Bean
@@ -109,7 +121,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         UsernameAuthenticationFilter usernameAuthenticationFilter = new UsernameAuthenticationFilter("/oauth/login");
         try {
             usernameAuthenticationFilter.setAuthenticationManager(super.authenticationManager());
+            //认证成功处理器
             usernameAuthenticationFilter.setAuthenticationSuccessHandler(restAuthenticationSuccessHandler);
+            //认证失败处理器
             usernameAuthenticationFilter.setAuthenticationFailureHandler(restAuthenticationFailureHandler);
         } catch (Exception e) {
             e.printStackTrace();
@@ -119,6 +133,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Bean
     public ImageAuthenticationFilter imageAuthenticationFilter() {
+        //调用构造方法
         ImageAuthenticationFilter imageAuthenticationFilter = new ImageAuthenticationFilter("/oauth/login/image");
         try {
             imageAuthenticationFilter.setAuthenticationManager(super.authenticationManager());
@@ -145,7 +160,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Bean
     public ImageAuthenticationProvider imageAuthenticationProvider() {
+        //构造函数
         ImageAuthenticationProvider imageAuthenticationProvider = new ImageAuthenticationProvider();
+        //设置参数
         imageAuthenticationProvider.setCodeManager(codeManager);
         imageAuthenticationProvider.setPasswordEncoder(passwordEncoder);
         imageAuthenticationProvider.setUserDetailService(userDetailService);
@@ -154,8 +171,11 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Bean
     public PhoneAuthenticationProvider phoneAuthenticationProvider() {
+        //构造对象
         PhoneAuthenticationProvider phoneAuthenticationProvider = new PhoneAuthenticationProvider();
+        //放入 数据库对象
         phoneAuthenticationProvider.setUserDetailService(userDetailService);
+        //放出 验证码对象
         phoneAuthenticationProvider.setCodeManager(codeManager);
         return phoneAuthenticationProvider;
     }

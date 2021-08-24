@@ -58,22 +58,30 @@ public class UserDetailServiceImpl implements UserDetailService {
     @Override
     public UserDetails loadUserByUsername(String s) throws UsernameNotFoundException {
         String userType = httpServletRequest.getParameter(USER_TYPE);
+        //是不是 admin
         if (UserMagic.USER_TYPE_ADMIN.equals(userType)){
+            //是 DataTableSystem
             return dtsUser(s);
         }
+        //不是
         return dtaUser(s);
     }
 
     @Override
     public UserDetails loadUserByPhone(String phone) {
         String userType = httpServletRequest.getParameter(USER_TYPE);
+        //是不是 member
         if (UserMagic.USER_TYPE_MEMBER.equals(userType)){
+            //查询 member信息 DataTableApplication
             UserDetail userDetail = dtaUser(phone);
+            //判断 是否为空
             if (userDetail==null){
+                //空，创建新用户
                 DtaUser dtaUser = new DtaUser();
                 dtaUser.setUserName(UserTool.createUserName()).setPassWord(passwordEncoder.encode(phone))
                         .setPhone(phone).setNickName(UserTool.createNickName())
                         .setStatus((byte) 1);
+                //放入数据库
                 dtaUserMapper.insert(dtaUser);
                 return dtaUser(phone);
             }
@@ -82,7 +90,7 @@ public class UserDetailServiceImpl implements UserDetailService {
         return dtsUser(phone);
     }
 
-    
+
     private UserDetail dtaUser(String s){
         QueryWrapper<DtaUser> queryWrapper = new QueryWrapper<>();
         queryWrapper.lambda().eq(DtaUser::getUserName,s)

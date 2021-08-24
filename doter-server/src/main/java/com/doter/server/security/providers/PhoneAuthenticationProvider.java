@@ -29,18 +29,25 @@ public class PhoneAuthenticationProvider implements AuthenticationProvider {
 
     @Override
     public Authentication authenticate(Authentication authentication) throws AuthenticationException {
+        //强转类型 创建认证对象
         PhoneCodeAuthenticationToken phoneCodeAuthenticationToken = (PhoneCodeAuthenticationToken) authentication;
+        //获取前端数据
         String principal = (String) phoneCodeAuthenticationToken.getPrincipal();
         String credentials = (String) phoneCodeAuthenticationToken.getCredentials();
+        //手机验证码
         codeManager.checkPhoneCode(principal,credentials);
+        //查询数据库
         UserDetails loadedUser = userDetailService.loadUserByPhone(principal);
+        //判断
         if (loadedUser==null){
             throw new InternalAuthenticationServiceException(ResultStatus.USER_ACCOUNT_NOT_EXIST.getMessage());
         }
         if (!loadedUser.isEnabled()){
             throw new LockedException(ResultStatus.USER_ACCOUNT_LOCKED.getMessage());
         }
+        //创建认证对象 放入用户信息和权限信息
         PhoneCodeAuthenticationToken userAuth = new PhoneCodeAuthenticationToken(loadedUser,loadedUser.getAuthorities());
+        //放入security上下文
         SecurityContextHolder.getContext().setAuthentication(userAuth);
         return userAuth;
     }
